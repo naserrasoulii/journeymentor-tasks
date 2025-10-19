@@ -9,6 +9,7 @@ import ToggleTheme from "@/features/theme/components/ToggleTheme.vue";
       <ToggleTheme />
     </div>
   </header>
-
-  <RouterView />
+  <main class="container my-8 px-4">
+    <RouterView />
+  </main>
 </template>

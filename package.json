@@ -12,11 +12,13 @@
     "@tabler/icons-vue": "^3.35.0",
     "@tailwindcss/vite": "^4.1.14",
     "@tanstack/vue-query": "^5.90.5",
+    "lodash": "^4.17.21",
     "tailwindcss": "^4.1.14",
     "vue": "^3.5.22",
     "vue-router": "^4.6.3"
   },
   "devDependencies": {
+    "@types/lodash": "^4.17.20",
     "@types/node": "^24.6.0",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/tsconfig": "^0.8.1",
