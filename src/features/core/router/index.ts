@@ -1,16 +1,16 @@
 import { CountiesRoutes } from "@/features/countries/routes";
 import {
-  createMemoryHistory,
   createRouter,
-  type RouteRecordRaw,
+  createWebHistory,
+  type RouteRecordRaw
 } from "vue-router";
 
 const routes: RouteRecordRaw[] = [
-  { path: "/", redirect: "/countries" },
+  { path: "/", redirect: { path: "/countries" } },
   ...CountiesRoutes,
 ];
 
 export const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHistory(),
   routes,
 });
