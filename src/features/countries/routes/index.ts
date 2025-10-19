@@ -1,5 +1,6 @@
 import DefaultLayout from "@/features/core/layouts/Default.vue";
 import Countries from "@/features/countries/views/index.vue";
+import CountryInfo from "@/features/countries/views/[name].vue";
 import { type RouteRecordRaw } from "vue-router";
 export const CountiesRoutes: RouteRecordRaw[] = [
   {
@@ -7,7 +8,7 @@ export const CountiesRoutes: RouteRecordRaw[] = [
     component: DefaultLayout,
     children: [
       { component: Countries, path: "", name: "CountyList" },
-      { component: Countries, path: ":countryName", name: "CountyInfo" },
+      { component: CountryInfo, path: ":countryName", name: "CountyInfo" },
     ],
   },
 ];

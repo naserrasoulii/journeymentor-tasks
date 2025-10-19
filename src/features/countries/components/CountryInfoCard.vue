@@ -1,10 +1,14 @@
 <template>
   <RouterLink
-    :to="{ name: 'CountyInfo', params: { countryName: props.name } }"
+    :to="{
+      name: 'CountyInfo',
+      params: { countryName: props.alpha3Code },
+    }"
     class="shadow-lg rounded-lg overflow-hidden bg-white block"
   >
     <div class="aspect-video">
       <img
+        loading="lazy"
         :src="props.flags.png"
         alt="flag"
         class="w-full h-full"
