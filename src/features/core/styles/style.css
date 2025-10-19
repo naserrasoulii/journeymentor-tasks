@@ -7,6 +7,8 @@
   --breakpoint-mobile: 375px;
   --breakpoint-desktop: 1440px;
 
+  --container-center: true;
+
   --color-dark-blue: hsl(209, 23%, 22%);
   --color-very-dark-blue-bg: hsl(207, 26%, 17%);
   --color-very-dark-blue-text: hsl(200, 15%, 8%);
@@ -20,6 +22,12 @@
     color-scheme: light;
   }
   body {
-    @apply bg-very-light-gray
+    @apply bg-very-light-gray;
+  }
+  .container {
+    @apply mx-auto;
+  }
+  button , a {
+    @apply cursor-pointer
   }
 }
