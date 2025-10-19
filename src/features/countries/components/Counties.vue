@@ -1,7 +1,7 @@
 <template>
   <div v-if="isPending">loading...</div>
   <template v-else>
-    <div class="container grid grid-cols-4 gap-20">
+    <div class="container grid desktop:grid-cols-4 gap-20 max-desktop:gap-10">
       <div v-for="country in countries">
         <CountryInfoCard
           v-bind="country"

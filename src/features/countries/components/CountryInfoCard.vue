@@ -4,7 +4,7 @@
       name: 'CountyInfo',
       params: { countryName: props.alpha3Code },
     }"
-    class="shadow-lg rounded-lg overflow-hidden bg-white block"
+    class="shadow-lg rounded-lg overflow-hidden bg-white dark:bg-dark-blue block"
   >
     <div class="aspect-video">
       <img

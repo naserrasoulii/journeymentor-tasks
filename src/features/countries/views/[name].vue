@@ -1,7 +1,7 @@
 <template>
   <div>
     <button
-      class="flex items-center gap-2 bg-white rounded-lg shadow-md px-6 py-2"
+      class="flex items-center gap-2 bg-white dark:bg-dark-blue text-dark-gray dark:text-white rounded-lg shadow-md px-6 py-2"
       @click="() => $router.back()"
     >
       <IconArrowLeft size="20" />
@@ -14,7 +14,7 @@
       loading ...
     </div>
     <div
-      class="mt-20 grid grid-cols-[40%_auto] gap-24"
+      class="mt-20 desktop:grid desktop:grid-cols-[40%_auto] desktop:gap-24 gap-14 flex flex-col"
       v-if="country"
     >
       <div class="aspect-video w-full">
@@ -25,7 +25,7 @@
       </div>
       <div class="flex flex-col justify-center">
         <h1 class="font-extrabold text-2xl">{{ country.name }}</h1>
-        <div class="my-6 grid grid-cols-2">
+        <div class="my-6 grid desktop:grid-cols-2 max-desktop:gap-8">
           <div>
             <p>
               <span class="font-semibold"> Native Name </span> :
@@ -73,13 +73,13 @@
           </div>
         </div>
         <div>
-          <div class="flex items-center gap-2">
-            <span class="font-semibold">Border Countries:</span>
-            <div class="flex items-center gap-2">
+          <div class="flex max-desktop:flex-col desktop:items-center gap-2">
+            <span class="font-semibold shrink-0">Border Countries:</span>
+            <div class="flex items-center gap-2 flex-wrap">
               <template v-for="border in country.borders">
                 <RouterLink
                   :to="{ name: 'CountyInfo', params: { countryName: border } }"
-                  class="bg-white rounded-sm shadow-md px-4 py-1"
+                  class="bg-white dark:bg-dark-blue text-dark-gray dark:text-white rounded-sm shadow-md px-4 py-1"
                 >
                   {{ border }}
                 </RouterLink>

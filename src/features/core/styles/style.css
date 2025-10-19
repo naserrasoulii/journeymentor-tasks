@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
 
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --breakpoint-*: initial;
@@ -24,7 +25,7 @@
   body {
     font-family: "Nunito Sans", sans-serif;
     font-size: 1rem;
-    @apply bg-very-light-gray;
+    @apply bg-very-light-gray text-dark-blue dark:text-white-element dark:bg-very-dark-blue-bg;
   }
   .container {
     @apply mx-auto;

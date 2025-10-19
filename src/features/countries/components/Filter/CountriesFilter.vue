@@ -1,7 +1,7 @@
 <template>
-  <div class="my-8 flex items-stretch justify-between">
+  <div class="my-8 flex items-stretch justify-between max-desktop:flex-wrap max-desktop:gap-4">
     <div
-      class="shadow-md relative p-2 rounded-lg min-w-80 bg-white text-dark-gray"
+      class="shadow-md relative p-2 rounded-lg min-w-80 bg-white dark:bg-dark-blue text-dark-gray dark:text-white"
     >
       <input
         class="w-full h-full outline-none border-none pl-10"
@@ -18,7 +18,7 @@
     <select
       v-model="region"
       @change="onRegionChange"
-      class="shadow-md rounded-md px-6 py-3 bg-white focus:outline-none cursor-pointer select"
+      class="shadow-md rounded-md px-6 py-3 focus:outline-none cursor-pointer select dark:bg-dark-blue text-dark-gray dark:text-white bg-white"
     >
       <option value="">Filter By Region</option>
       <option value="Africa">Africa</option>
